@@ -5,7 +5,7 @@ on:
       - master
   schedule:
   # 秒 分钟 小时 日期 月份 星期
-    - cron:  "0 0 2,4,7,8,9,10 * *"
+    - cron:  "0 2,4,6,7,8,9 * *"
 jobs:
   dingtalk:
     runs-on: ubuntu-latest
