@@ -1,4 +1,5 @@
 const ChatBot = require("dingtalk-robot-sender");
+const args = process.argv.slice();
 
 function main(token, mobile) {
   const defaultOptions = {
@@ -31,8 +32,9 @@ function main(token, mobile) {
 }
 
 if (!module.parent) {
-  let token = args[1];
-  let mobile = args[2];
+  let token = args[2];
+  let mobile = args[3];
+  console.log("token", token, "\nmobile", mobile);
   main(token, mobile);
 } else {
   // we were require()d from somewhere else
