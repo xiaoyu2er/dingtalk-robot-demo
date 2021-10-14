@@ -1,0 +1,19 @@
+name: Update CCTV News
+on: 
+  push:
+    branches: 
+      - master
+  schedule:
+    - cron:  "0 0 2,4,7,8,9,10 * * ? "
+jobs:
+  dingtalk:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Node.js
+        uses: actions/setup-node@main
+        with:
+          node-version: '14'
+      - name: Install dependencies
+        run: npm install
+      - name: Run Scripts
+        run: node index.js ${{ secrets.TOKEN }} ${{ secrets.MOBILE }}
