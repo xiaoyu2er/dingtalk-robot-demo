@@ -18,7 +18,8 @@
 获得 webhook 地址，例如 https://oapi.dingtalk.com/robot/send?access_token=xx, 复制 access_token
 
 ### 2. fork 本仓库
-### 3. 设置 Action Securitys
+### 3.1 修改 words.json
+### 3.2 设置 Action Security
 增加两个 secrets: TOKEN, MOBILE, 其中 TOKEN 即 第一步获得的 access_token, MOBILE 为群众需要 at 的用户手机号
 
 ![image](https://user-images.githubusercontent.com/10123916/137683825-6007b802-a3c8-4f59-b894-0d236dfba353.png)
