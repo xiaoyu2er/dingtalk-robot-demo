@@ -1,11 +1,13 @@
 name: dingtalk
 on: 
+  # 代码 push
   push:
     branches: 
       - master
-  schedule:
-  # 分钟 小时 日期 月份 星期
-    - cron:  "0 2,3,6,7,8,9 * * *"
+  # 定时任务
+  # schedule:
+  ## 分钟 小时 日期 月份 星期
+  # - cron:  "0 2,3,6,7,8,9 * * *"
 jobs:
   dingtalk:
     runs-on: ubuntu-latest
